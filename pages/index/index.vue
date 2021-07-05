@@ -1,5 +1,6 @@
 <template>
 	<view class="container">
+		<add-tip :tip="tip" :duration="duration"/> <!-- 添加胶囊提示 -->
 		<v-tabs v-model="current" :tabs="tabs" @change="changeTab" class="tab"></v-tabs>
 		<view class="coupon" ref="coupon">
 			<view class="item" v-for="(v, i) in couponList" @click="toCoupon(i)" :key="i">
@@ -21,16 +22,26 @@
 </template>
 
 <script>
-
+// 引入胶囊提示插件
+import addTip from "../../components/add-tip/add-tip"
 
 export default {
+	//#ifdef MP-WEIXIN
+	  components:{
+	      addTip //启动胶囊插件
+	    },
+	//#endif
 	data() {
 		return {
 			current: 0,
 			tabs: [],
 			couponList: [],
 			coupons: [],
-			openid: ''
+			openid: '',
+			//#ifdef MP-WEIXIN
+			tip: "点击「添加小程序」，下次访问更便捷", // 胶囊提示信息，默认为【点击「添加小程序」，下次访问更便捷】
+			duration: 10 ,// 胶囊提示显示时长，默认为5s
+			//#endif
 		};
 	},
 	onLoad(e) {
