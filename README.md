@@ -42,3 +42,5 @@ minapp: {
 
 
 如有线上案例或疑问，请提issue
+
+[参考文档](https://www.yuque.com/chanafanghua-mqija/hleugv/wsqwyg)
