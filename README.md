@@ -1,5 +1,3 @@
-[新]微信红包封面领取小程序：https://github.com/zwpro/redCover
-
 ### 更新日志 12.26
 
 新增订阅功能
@@ -9,7 +7,6 @@
 
 ### 更新日志 11-30
 新增uniCloud云开发，小程序数据可通过api更改。
-（如只需要数据写死在前端，可切换到静态数据分支 [no-api](https://github.com/zwpro/coupons/tree/no-api)）
 
 # 美团饿了吗CPS红包，别人领红包下单，你拿推广佣金
 <img src="https://raw.githubusercontent.com/zwpro/coupons/master/static/demo.png" width="300"/>
@@ -42,11 +39,6 @@ minapp: {
     path: 'pages/sharePid/web/index?scene=https://s.click.ele.me/wR9ecuu'
 }
 ```
-
-已上线案例：
-
-<img src="https://raw.githubusercontent.com/zwpro/coupons/master/examples/微信图片_20201107150908.jpg" width="200"/><img src="https://raw.githubusercontent.com/zwpro/coupons/master/examples/微信图片_20201107150917.png" width="200"/><img src="https://raw.githubusercontent.com/zwpro/coupons/master/examples/微信图片_20201107150923.jpg" width="200"/><img src="https://raw.githubusercontent.com/zwpro/coupons/master/examples/微信图片_20201107150932.jpg" width="200"/><img src="https://raw.githubusercontent.com/zwpro/coupons/master/examples/微信图片_20201107150944.jpg" width="200"/><img src="https://raw.githubusercontent.com/zwpro/coupons/master/examples/微信图片_20201107150950.jpg" width="200"/><img src="https://raw.githubusercontent.com/zwpro/coupons/master/examples/微信图片_20201107163539.jpg" width="200"/><img src="https://raw.githubusercontent.com/zwpro/coupons/master/examples/微信图片_20201107163546.jpg" width="200"/>
-
 
 
 如有线上案例或疑问，请提issue
