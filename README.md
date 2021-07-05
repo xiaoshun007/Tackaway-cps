@@ -1,12 +1,17 @@
-### 更新日志 12.26
+### 更新日志 20210705
 
-新增订阅功能
+1、新增订阅功能
+```
+1.1 修改 cloudfunctions/common/utils/index.js 中的 appid和secret参数
+1.2 上传代码到云服务器
+1.3 修改 pages/index/index.vue：const lessonTmplId = 'hLV31-w38lq0yq8p6GEQUtBU7brtMrCFmaCCyxbU4xI';
+```
+2、增加胶囊提示
+```
+参见：components/add-tip/add-tip.vue
+```
+3、修改.gitignore，排除.hbuilderx文件
 
-修改 cloudfunctions-aliyun/common/utils/index.js 中的 appid和secret参数，上传代码到云服务器即可
-
-
-### 更新日志 11-30
-新增uniCloud云开发，小程序数据可通过api更改。
 
 # 美团饿了吗CPS红包，别人领红包下单，你拿推广佣金
 <img src="https://raw.githubusercontent.com/zwpro/coupons/master/static/demo.png" width="300"/>
