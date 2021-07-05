@@ -58,10 +58,10 @@ exports.main = async (event, context) => {
 						  thing1: {
 							  value: "记得领红包哦！",
 						  },
-						  thing4: {
+						  thing2: {
 							  value: message.data,
 						  },
-						  thing5: {
+						  thing3: {
 							  value: now_date,
 						  } 
 					  },

@@ -33,7 +33,7 @@
 			</view>
 		</view>
 		<view class="version">
-			v3.0
+			v1.0.1
 		</view>
 	</view>
 </template>

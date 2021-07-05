@@ -156,7 +156,7 @@ export default {
 										        if (res.confirm) {
 										            console.log('订阅开始')
 													// 活动开始提醒 模板
-										            const lessonTmplId = 'hLV31-w38lq0yq8p6GEQUtBU7brtMrCFmaCCyxbU4xI';
+										            const lessonTmplId = 'zj-D8S1t19Qfq3J6yctiaTLt-LQbQYolto3o6YkhOLk';
 													const data = {
 										            		data: '外卖领券提醒, 快来领优惠券啦！',
 										            		templateId: lessonTmplId,
