@@ -3,7 +3,17 @@
 		"path": "pages/food/food"
 	},{
 		"path": "pages/index/index"
-	}, {
+	},{
+        "path" : "pages/eatwhat/eatwhat",
+        "style": {
+          "navigationBarTitleText": "吃什么"
+        },
+		"permission": {
+			"scope.userLocation": {
+			"desc": "你的位置信息将用于小程序位置接口的效果展示" // 高速公路行驶持续后台定位
+    }
+  }
+    },{
 		"path": "pages/user/user",
 		"style": {
 			"navigationBarTitleText": "我的",
@@ -38,13 +48,17 @@
 				"text": "食谱",
 				"iconPath": "/static/tabbar/home.png",
 				"selectedIconPath": "/static/tabbar/home_fill.png"
-			},{
+			}, {
+               "pagePath": "pages/eatwhat/eatwhat",
+               "text": "吃什么",
+               "iconPath": "static/tabbar/eat-what.png",   
+               "selectedIconPath": "static/tabbar/eat-what-fill.png"
+            },{
 				"pagePath": "pages/index/index",
 				"text": "福利",
 				"iconPath": "/static/tabbar/fuli.png",
 				"selectedIconPath": "/static/tabbar/fuli_fill.png"
-			},
-			{
+			},{
 				"pagePath": "pages/user/user",
 				"text": "我的",
 				"iconPath": "/static/tabbar/user.png",
