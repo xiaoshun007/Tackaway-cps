@@ -267,11 +267,11 @@ export default {
 			
 			//微信小程序
 			//#ifdef MP-WEIXIN
-			
+			console.log("MP-WEIXIN")
 			if (project.description) {
 				console.log("description：" + project.description);
 				uni.navigateTo({
-					url: `/pages/couponDetail/coupon-detail?bannerPic=${project.bannerPic}`,
+					url: `/pages/couponDetail/coupon-detail?url=${project.url}`,
 					success(res) {
 						console.log(res);
 					},

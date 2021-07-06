@@ -70,9 +70,11 @@
 				// #endif
 				let project = this.project
 				// #ifdef H5
-				location.href = "https://tb.jiuxinban.com/7GtMUh"
+				console.log("h5");
+				window.location.href = "https://tb.jiuxinban.com/7GtMUh"
 				// #endif
 				// #ifdef MP-WEIXIN
+				console.log("MP-WEIXIN");
 				uni.navigateToMiniProgram({
 				  appId: project.appid, 
 				  path: project.path,
@@ -87,7 +89,9 @@
 				  }
 				})
 				// #endif
+				
 				// #ifdef MP-QQ
+				console.log("MP-QQ");
 				uni.setClipboardData({
 					data:  project.url,
 					success: function () {
