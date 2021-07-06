@@ -22,6 +22,11 @@
 	}, {
 			"path": "pages/detail/detail",
 			"style": {}
+		}, {
+			"path": "pages/couponDetail/coupon-detail",
+			"style": {
+				"navigationBarTitleText": "领取优惠奖励"
+			}
 		},
 		{
 			"path": "pages/chooseLib/chooseLib",

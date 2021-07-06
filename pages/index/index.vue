@@ -258,13 +258,31 @@ export default {
 			}, 500)
 		},
 		toCoupon(i){
-			console.log(this.couponList[i])
+			let project = this.couponList[i]
+			console.log(project)
 			//h5
 			//#ifdef H5
-			window.location.href = this.couponList[i].url
+			window.location.href = project.url
 			//#endif
+			
 			//微信小程序
 			//#ifdef MP-WEIXIN
+			
+			if (project.description) {
+				console.log("description：" + project.description);
+				uni.navigateTo({
+					url: `/pages/couponDetail/coupon-detail?bannerPic=${project.bannerPic}`,
+					success(res) {
+						console.log(res);
+					},
+					fail(err) {
+						// errMsg: "navigateTo:fail page "pages/index/pages/test/test" is not found"
+						console.log(err);
+					}
+				});
+				return;
+			}
+			
 			if(this.couponList[i].minapp){
 				wx.navigateToMiniProgram({
 				  appId: this.couponList[i].minapp.appid,
@@ -273,7 +291,7 @@ export default {
 					// 打开成功
 				  }
 				})
-			}
+			} 
 			//#endif
 		},
 		getHome(){
