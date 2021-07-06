@@ -86,11 +86,11 @@ export default {
   onLoad: function () {
 	  const storFoods = uni.getStorageSync("menu-" + this.menuIdx);
 	  if (storFoods){
-		  this.$scope.setData({
+		  this.setData({
 		    foods: storFoods
 		  });
 	  }else{
-		  this.$scope.setData({
+		  this.setData({
 		    foods: this.menu[this.menuIdx][1]
 		  });
 	  }
@@ -116,6 +116,26 @@ export default {
     }
   },
   methods: {
+	setData:function(obj){    
+		let that = this;    
+		let keys = [];    
+		let val,data;    
+		Object.keys(obj).forEach(function(key){    
+		 keys = key.split('.');    
+		 val = obj[key];    
+		 data = that.$data;    
+		 keys.forEach(function(key2,index){    
+			 if(index+1 == keys.length){    
+				 that.$set(data,key2,val);    
+			 }else{    
+				 if(!data[key2]){    
+					that.$set(data,key2,{});    
+				 }    
+			 }    
+			 data = data[key2];    
+		 })    
+		});
+	},
     random: function (t, a) {
       return t = t || 100, a = a || 0, Math.floor(Math.random() * (t - a + 1)) + a;
     },
@@ -123,7 +143,7 @@ export default {
       var a = Number(t.target.dataset.id);
       this.tempFoods.splice(this.tempFoods.findIndex(function (t) {
         return t.id === a;
-      }), 1), this.$scope.setData({
+      }), 1), this.setData({
         tempFoods: this.tempFoods
       });
     },
@@ -138,7 +158,7 @@ export default {
         icon: "none"
       });else {
         var e = 1;
-        this.$scope.setData({
+        this.setData({
           status: "running",
           tempFoods: [],
           punctuation: "？"
@@ -146,7 +166,7 @@ export default {
         !function n() {
           var i,
               s = a.foods[a.random(a.foods.length - 1)];
-          a.$scope.setData((i = {}, t(i, "tempFoods[" + a.tempFoods.length + "]", {
+          a.setData((i = {}, t(i, "tempFoods[" + a.tempFoods.length + "]", {
             id: e,
             food: s,
             top: a.random(100, 0) + "%",
@@ -159,7 +179,7 @@ export default {
     },
     changeType: function (t) {
       var a = t.target.dataset.type;
-      a !== this.type && (this.$scope.setData({
+      a !== this.type && (this.setData({
         type: a,
         food: "神马",
         punctuation: "？",
@@ -176,7 +196,7 @@ export default {
     changeTime: function (t) {
       if ("running" !== this.status) {
         var a = "number" == typeof t ? t : (this.menuIdx + 1) % this.menu.length;
-        this.$scope.setData({
+        this.setData({
           menuIdx: a,
           foods: this.menu[a][1],
           food: "神马",
@@ -245,7 +265,7 @@ export default {
           return t.concat(a.data);
         }, []);
 		
-        a.$scope.setData({
+        a.setData({
           type: "human",
           food: "神马",
           punctuation: "？",
@@ -284,7 +304,7 @@ export default {
       });
     },
     editMenu: function () {
-      this.$scope.setData({
+      this.setData({
         showMenu: !0,
         menuValue: (this.restaurants.length ? this.restaurants.map(function (t) {
           return t.title;
@@ -294,7 +314,7 @@ export default {
     handleFormSubmit: function (t) {
       var a = t.detail.value.textarea.trim();
 	  if (a) {
-		  this.$scope.setData({
+		  this.setData({
 			showMenu: !1,
 			foods: a.split(" ")
 		  });
