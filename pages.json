@@ -1,9 +1,9 @@
 {
 	"pages": [{
-		"path": "pages/food/food"
-	},{
 		"path": "pages/index/index"
-	},{
+	},  {
+		"path": "pages/food/food"
+	},  {
         "path" : "pages/eatwhat/eatwhat",
         "style": {
           "navigationBarTitleText": "吃什么"
@@ -49,6 +49,11 @@
 		"color": "#707070",
 		"selectedColor": "#ffad00",
 		"list": [{
+				"pagePath": "pages/index/index",
+				"text": "福利",
+				"iconPath": "/static/tabbar/fuli.png",
+				"selectedIconPath": "/static/tabbar/fuli_fill.png"
+			}, {
 				"pagePath": "pages/food/food",
 				"text": "食谱",
 				"iconPath": "/static/tabbar/home.png",
@@ -59,11 +64,6 @@
                "iconPath": "static/tabbar/eat-what.png",   
                "selectedIconPath": "static/tabbar/eat-what-fill.png"
             },{
-				"pagePath": "pages/index/index",
-				"text": "福利",
-				"iconPath": "/static/tabbar/fuli.png",
-				"selectedIconPath": "/static/tabbar/fuli_fill.png"
-			},{
 				"pagePath": "pages/user/user",
 				"text": "我的",
 				"iconPath": "/static/tabbar/user.png",
